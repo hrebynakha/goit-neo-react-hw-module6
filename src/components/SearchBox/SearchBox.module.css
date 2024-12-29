@@ -1,0 +1,15 @@
+.sbox {
+  border-radius: 12px;
+  height: 56px;
+  width: 50%;
+  border: none;
+  outline: transparent;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  font-size: medium;
+  font-family: sans-serif;
+}
+
+input[type="text"] {
+  background-color: #d1d1d1;
+}
