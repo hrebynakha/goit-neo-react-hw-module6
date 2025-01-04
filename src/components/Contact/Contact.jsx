@@ -1,13 +1,21 @@
+import { useDispatch } from "react-redux";
 import { IconContext } from "react-icons";
+import { toast } from "react-toastify";
 import {
   AiOutlinePhone,
   AiOutlineUser,
   AiOutlineCloseCircle,
 } from "react-icons/ai";
 
+import { deleteContact } from "../../redux/contactsSlice";
 import css from "./Contact.module.css";
 
-const Contact = ({ id, name, number, onDelete, color = "#fff" }) => {
+const Contact = ({ id, name, number, color = "#fff" }) => {
+  const dispatch = useDispatch();
+  const onDelete = (contactId) => {
+    dispatch(deleteContact(contactId));
+    toast.warn("Contact deleted!");
+  };
   return (
     <div className={css.contact}>
       <div>
